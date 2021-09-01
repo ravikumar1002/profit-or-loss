@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="stock-page">
+        <h1 class="page-heading">Stock Profile & Loss Calculator</h1>
+        <div class="input-items">
+            <div class="input-labels">
+                <label for="intial-price" class="lable-name">Intial Price </label>
+                <label for="stocks" class="lable-name">Quantity of Stocks </label>
+                <label for="current-price" class="lable-name">Current Price</label>
+            </div>
+            <div class="input-box">
+                <input type="number" id="intial-price" class="input-value">
+                <input type="number" id="stocks" class="input-value">
+                <input type="number" id="current-price" class="input-value">
+            </div>
+        </div>
+        <div class="page-btn">
+            <button id="tell-me">tell me</button>
+        </div>
+        <div class="result-text">
+            <div id="output-msg"></div>
+        </div>
+    </div>
+    <div class="social-touch">
+        <footer>
+            <p><a href="https://github.com/ravikumar1002" class="fab fa-github icon-style" target="_blank"></a></p>
+            <p><a href="https://www.linkedin.com/in/ravikumar-1002" class="fab fa-linkedin icon-style" target="_blank"></a></p>
+            <p><a href="https://twitter.com/kumarravi1002" class="fab fa-twitter-square icon-style" target="_blank"></a></p>
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
