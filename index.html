@@ -21,14 +21,16 @@
                 <label for="stocks" class="lable-name">Quantity of Stocks </label>
                 <label for="current-price" class="lable-name">Current Price</label>
             </div>
+            <form id="input-section">
             <div class="input-box">
-                <input type="number" id="intial-price" class="input-value">
-                <input type="number" id="stocks" class="input-value">
-                <input type="number" id="current-price" class="input-value">
+                <input type="number" id="intial-price" class="input-value" min="0">
+                <input type="number" id="stocks" class="input-value" min="0">
+                <input type="number" id="current-price" class="input-value" min="0">
             </div>
+        </form>
         </div>
         <div class="page-btn">
-            <button id="tell-me">tell me</button>
+            <button id="tell-me" form="input-section">tell me</button>
         </div>
         <div class="result-text">
             <div id="output-msg"></div>

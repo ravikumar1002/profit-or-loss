@@ -39,8 +39,17 @@ function  calculateProfitAndLoss(costPrice ,sellingPrice, stock){
 }
 
 
-tellMeBtn.addEventListener("click", function(){
+tellMeBtn.addEventListener("click", function(e){
+    e.preventDefault()
+    if((intialPrice.value >= 0 ) && ((stocks.value) >=0 ) && ((currentPrice.value) >=0 )){
     checkFiled()
+    }else{
+      outputMsg.style.display = "none"
+      bodyEffect.classList.remove("loss-style")
+      bodyEffect.classList.remove("profit-style")
+      bodyEffect.classList.add("body") 
+      alert("Value should not be below zero") 
+    }
 })
 
 
