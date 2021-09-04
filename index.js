@@ -1,9 +1,10 @@
-let intialPrice = document.querySelector("#intial-price")
-let stocks = document.querySelector("#stocks")
-let currentPrice = document.querySelector("#current-price")
-let tellMeBtn = document.querySelector("#tell-me")
-let outputMsg = document.querySelector("#output-msg")
-let bodyEffect = document.querySelector("body")
+const intialPrice = document.querySelector("#intial-price")
+const stocks = document.querySelector("#stocks")
+const currentPrice = document.querySelector("#current-price")
+const tellMeBtn = document.querySelector("#tell-me")
+const outputMsg = document.querySelector("#output-msg")
+const backgroundChange = document.querySelector(".stock-page")
+
 function checkFiled(){
     if (((intialPrice.value) == "" ) || ((stocks.value) == "" ) || ((currentPrice.value) == "" )) {
         alert('Please fill out all Fields')
@@ -16,8 +17,8 @@ function  calculateProfitAndLoss(costPrice ,sellingPrice, stock){
    if(sellingPrice > costPrice){
       let  profit = sellingPrice - costPrice
       let profitPercentage =  (profit/costPrice)*100
-      bodyEffect.classList.remove("loss-style")
-      bodyEffect.classList.add("profit-style")
+      backgroundChange.classList.remove("loss-style")
+      backgroundChange.classList.add("profit-style")
       outputMsg.style.display = "block"
        outputMsg.innerText = ` Hey, the profit is ₹${(profit*stock).toFixed(2)} and the profit percent is ${(profitPercentage*stock).toFixed(2)}%`   
        outputMsg.style.color = "green"
@@ -25,8 +26,8 @@ function  calculateProfitAndLoss(costPrice ,sellingPrice, stock){
    } else if (sellingPrice < costPrice){
        let loss = costPrice - sellingPrice
        let lossPercentage = (loss/costPrice)*100
-      bodyEffect.classList.remove("profit-style")
-      bodyEffect.classList.add("loss-style")
+      backgroundChange.classList.remove("profit-style")
+      backgroundChange.classList.add("loss-style")
       outputMsg.style.display = "block"
        outputMsg.innerText = ` Hey, the loss is ₹${(loss*stock).toFixed(2)} and the loss percent is ${(lossPercentage*stock).toFixed(2)}%`
        outputMsg.style.color = "red"
@@ -45,9 +46,9 @@ tellMeBtn.addEventListener("click", function(e){
     checkFiled()
     }else{
       outputMsg.style.display = "none"
-      bodyEffect.classList.remove("loss-style")
-      bodyEffect.classList.remove("profit-style")
-      bodyEffect.classList.add("body") 
+      backgroundChange.classList.remove("loss-style")
+      backgroundChange.classList.remove("profit-style")
+      backgroundChange.classList.add("body") 
       alert("Value should not be below zero") 
     }
 })

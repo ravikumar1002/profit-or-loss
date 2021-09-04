@@ -11,6 +11,7 @@ a{
 
 body{
     background: rgb(92,92,93);
+   height: 100vh;
 background: linear-gradient(90deg, rgba(92,92,93,0.26381890646883754) 0%, rgba(0,212,255,0.381465965292367) 100%);
 
 }
@@ -20,6 +21,7 @@ background: linear-gradient(90deg, rgba(92,92,93,0.26381890646883754) 0%, rgba(0
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #d4e7c9;
+    padding-bottom: 3.5rem;
 }
 
 .loss-style{
@@ -27,6 +29,7 @@ background: linear-gradient(90deg, rgba(92,92,93,0.26381890646883754) 0%, rgba(0
     background-color: #f3e3e3;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 3.5rem;
 } 
 
 
@@ -34,18 +37,24 @@ background: linear-gradient(90deg, rgba(92,92,93,0.26381890646883754) 0%, rgba(0
 .page-heading{
     text-align: center;
     font-size: 3.3rem;
-    padding:3.5rem 0rem 2.5rem 0 ;
+    padding:4.5rem 0rem 2.5rem 0 ;
 }
-.input-items{
+
+
+.user-input-section{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    /* gap: 2rem; */
+    flex-direction: column;
+    width: 100%;
 }
 
-.input-labels{
+.input-with-lable-section{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    text-align: right;
+    width: 100%;
 }
 
 .lable-name{
@@ -53,17 +62,15 @@ background: linear-gradient(90deg, rgba(92,92,93,0.26381890646883754) 0%, rgba(0
     padding: 0.5rem 1rem;
     font-size: 1.3rem;
     font-weight: 600;
-}
-
-.input-box{
-    display: flex;
-    flex-direction: column;
+    width: 40%;    
 }
 
 .input-value{
     margin: 1rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
+    width: 70%;
+   
 }
 
 .page-btn{
@@ -73,7 +80,7 @@ background: linear-gradient(90deg, rgba(92,92,93,0.26381890646883754) 0%, rgba(0
 
 #tell-me{
     padding: 0.5rem 1rem;
-    margin: 1rem;
+    margin: 2.6rem;
     font-size: 1.2rem;
     font-weight: 500;
     cursor: pointer;
@@ -86,19 +93,20 @@ background: linear-gradient(90deg, rgba(92,92,93,0.26381890646883754) 0%, rgba(0
 #output-msg{
     text-align: center;
     font-size: 1.4rem;
-    padding:0.7rem;
+    padding:0.75rem;
     background-color: rgb(241, 240, 236);
     margin: auto;
     display: none;
     border: 1px solid black;
     font-weight: bold;
+    margin-bottom: 2.5rem;
 }
 
 
 .social-touch{
-    position:absolute;
+    position:sticky;
     width: 100%;
-    bottom: 0;  
+    top: 100vh;
 }
 
 .icon-style{
@@ -110,14 +118,31 @@ footer{
    display: flex;
    gap: 3rem;
    justify-content: center;
-   width: 97.8vw;
+   width: auto;
    padding: 1rem;
-   margin-top: 2rem;
    background: rgba(140, 140, 145, 0.719);
    background: linear-gradient(90deg, rgb(116, 116, 117) 0%, rgba(45,45,49,0.9332866935836834) 0%, rgb(179, 181, 182) 100%); 
 }
 
 
+@media screen and (max-width: 500px){
+    .input-with-lable-section{
+    flex-direction: column;
+    margin-bottom: 1rem;
+  
+    }
+    .lable-name{
+        text-align: center;
+        padding: 0;
+    }
+    .input-value{   
+        margin: auto;
+        width: auto;
+    }
+    #output-msg{
+        margin: 0 1.3rem;
+    }
+}
 
 
 

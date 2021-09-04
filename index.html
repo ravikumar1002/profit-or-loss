@@ -15,20 +15,32 @@
 <body>
     <div class="stock-page">
         <h1 class="page-heading">Stock Profile & Loss Calculator</h1>
-        <div class="input-items">
-            <div class="input-labels">
-                <label for="intial-price" class="lable-name">Intial Price </label>
-                <label for="stocks" class="lable-name">Quantity of Stocks </label>
-                <label for="current-price" class="lable-name">Current Price</label>
-            </div>
-            <form id="input-section">
-            <div class="input-box">
-                <input type="number" id="intial-price" class="input-value" min="0">
-                <input type="number" id="stocks" class="input-value" min="0">
-                <input type="number" id="current-price" class="input-value" min="0">
+        <form id="input-section">
+            <div class="user-input-section">
+
+                <div class="input-with-lable-section">
+                    <label for="intial-price" class="lable-name ">Intial Price </label>
+                    <div>
+                        <input type="number" id="intial-price" class="input-value" min="0">
+                    </div>
+
+                </div>
+                <div class="input-with-lable-section">
+                    <label for="stocks" class="lable-name">Quantity of Stocks </label>
+                    <div>
+                        <input type="number" id="stocks" class="input-value" min="0">
+                    </div>
+                </div>
+
+                <div class="input-with-lable-section">
+                    <label for="current-price" class="lable-name">Current Price</label>
+                    <div>
+                        <input type="number" id="current-price" class="input-value" min="0">
+                    </div>
+                </div>
+
             </div>
         </form>
-        </div>
         <div class="page-btn">
             <button id="tell-me" form="input-section">tell me</button>
         </div>
@@ -39,8 +51,10 @@
     <div class="social-touch">
         <footer>
             <p><a href="https://github.com/ravikumar1002" class="fab fa-github icon-style" target="_blank"></a></p>
-            <p><a href="https://www.linkedin.com/in/ravikumar-1002" class="fab fa-linkedin icon-style" target="_blank"></a></p>
-            <p><a href="https://twitter.com/kumarravi1002" class="fab fa-twitter-square icon-style" target="_blank"></a></p>
+            <p><a href="https://www.linkedin.com/in/ravikumar-1002" class="fab fa-linkedin icon-style"
+                    target="_blank"></a></p>
+            <p><a href="https://twitter.com/kumarravi1002" class="fab fa-twitter-square icon-style" target="_blank"></a>
+            </p>
         </footer>
     </div>
 
